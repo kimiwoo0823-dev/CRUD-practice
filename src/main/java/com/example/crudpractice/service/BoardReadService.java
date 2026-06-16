@@ -19,7 +19,7 @@ public class BoardReadService {
         List<BoardEntity> boardEntity = boardRepository.findAll();
 
         List<BoardResponse> boardResponse = boardEntity.stream()
-                .map(board -> new BoardResponse(board))
+                .map(BoardResponse::new)
                 .toList();
 
         return boardResponse;
