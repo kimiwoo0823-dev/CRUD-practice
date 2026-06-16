@@ -18,7 +18,7 @@ public class BoardEntity {
     private String content;
 
     @Builder
-    public BoardEntity(String title, String content) {
+    private BoardEntity(String title, String content) {
         this.title = title;
         this.content = content;
     }
