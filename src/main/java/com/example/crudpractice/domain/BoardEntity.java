@@ -1,5 +1,6 @@
 package com.example.crudpractice.domain;
 
+import com.example.crudpractice.presentation.dto.request.BoardRequest;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -21,5 +22,10 @@ public class BoardEntity {
     private BoardEntity(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public void BoardUpdate(BoardRequest boardRequest){
+        this.title = boardRequest.getTitle();
+        this.content = boardRequest.getContent();
     }
 }
